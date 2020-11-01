@@ -2,6 +2,7 @@ from pydrive.auth import GoogleAuth
 from pydrive.drive import GoogleDrive
 import argparse
 
+print('Begin authentication')
 gauth = GoogleAuth()
 drive = GoogleDrive(gauth)
 
