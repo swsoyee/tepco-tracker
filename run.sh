@@ -3,7 +3,8 @@ date=$(date '+%Y-%m-%d')
 date_filename=$(date '+%Y%m%d')
 
 pip3 install setuptools
-pip3 install -r requirements.txt
+pip3 install pydrive
+pip3 install requests
 
 python3 tepco-watt-stats.py $date -u $USER -p $PASSWORD > $date_filename.csv
 
