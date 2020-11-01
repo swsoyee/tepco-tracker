@@ -1,0 +1,19 @@
+name: Update tepco data
+
+on:
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  request-update-data:
+    name: update tepco data
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          ref: ${{ github.head_ref }}
+      - name: Run bash script
+        run: sh run.sh
+        env:
+          USER: ${{ secrets.USER }}
+          PASSWORD: ${{ secrets.PASSWORD }}
