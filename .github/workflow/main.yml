@@ -2,7 +2,7 @@ name: Update tepco data
 
 on:
   pull_request:
-    branches: [ master ]
+    branches: [ main ]
 
 jobs:
   request-update-data:
