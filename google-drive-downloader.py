@@ -17,6 +17,4 @@ for drive_file in file_list:
         file_local = drive.CreateFile({'id': drive_file['id']})
         file_local.GetContentFile('tepco-hourly.csv')
         print('Download `tepco-hourly.csv` to local has been successed.')
-        # drive_file.Delete()
-        print('Remove `tepco-hourly.csv` in remote.')
         break
