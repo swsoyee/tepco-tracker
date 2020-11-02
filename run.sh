@@ -1,6 +1,6 @@
 # put current date as yyyy-mm-dd in $date and $date_filename
-date=$(date -d '-1 day' '+%Y-%d-%m')
-date_filename=$(date '+%Y%m%d')
+date=$(date -d '-1 day' '+%Y-%m-%d')
+date_filename=$(date -d '-1 day' '+%Y%m%d')
 
 pip3 install setuptools
 pip3 install pydrive
