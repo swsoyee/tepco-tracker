@@ -8,6 +8,8 @@ pip3 install requests
 
 python3 tepco-watt-stats.py $date -u $USER -p $PASSWORD > $date_filename.csv
 
+echo $CREDENTIALS >> credentials.json
 echo client_config:'\n  'client_id: $CLIENT_ID'\n  'client_secret: $CLIENT_SECRET >> settings.yaml
+
 python3 google-drive-downloader.py -i $RESULT_FOLDER_ID
 # sed 's/\"//g' $date_filename.csv | awk 'NF' | cut -f5- -d, | sed '1d' >> tepco-hourly.csv
