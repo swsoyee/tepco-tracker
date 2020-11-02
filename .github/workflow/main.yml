@@ -1,8 +1,8 @@
 name: Update tepco data
 
 on:
-  pull_request:
-    branches: [ main ]
+  schedule:
+    - cron: "0 16 * * *"
 
 jobs:
   request-update-data:
